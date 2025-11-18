@@ -1,0 +1,111 @@
+/* Файл: articles/static/css/article.css */
+
+/* Общие стили для всей страницы */
+body.archive {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Стили для header (блок с логотипом) */
+.header {
+    text-align: center;
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.header img.logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+}
+
+.header h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Стили для основного контента (блок archive) */
+.archive {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для одной статьи (контейнер one-post) */
+.one-post {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Стили для заголовка статьи */
+.post-title {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+
+/* Стили для блока с информацией об авторе и дате */
+.article-info {
+    overflow: hidden;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #e0f7fa;
+}
+
+.article-author {
+    float: left;
+    width: 50%;
+}
+
+.article-created-date {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+/* Стили для текста статьи */
+.article-text {
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Стили для сообщения об отсутствии статей */
+.no-articles {
+    text-align: center;
+    font-style: italic;
+    color: #e0f7fa;
+}
+
+/* Стили для подвала */
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #e0f7fa;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Очистка float */
+.article-info:after {
+    content: "";
+    display: table;
+    clear: both;
+}

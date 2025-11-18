@@ -1,0 +1,110 @@
+/* Файл: flatpages/static/index.css */
+
+/* Общие стили для body */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* ✅ УСЛОВИЕ 1: Шрифт с засечками для h1 */
+h1 {
+    font-family: Georgia, serif; /* Шрифт с засечками */
+    color: #ffeb3b;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+/* ✅ УСЛОВИЕ 2: Высота картинки 30px */
+.header img {
+    display: block;
+    height: 30px; /* ✅ ИСПРАВЛЕНО: было 60px, теперь 30px */
+    width: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ✅ УСЛОВИЕ 3: Размер шрифта для h4 */
+h4 {
+    font-size: 16px; /* ✅ Размер шрифта для подзаголовков */
+    color: #c8e6c9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ✅ УСЛОВИЕ 4: Ширина таблицы 100% */
+table {
+    width: 100%; /* ✅ Таблица на всю ширину экрана */
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
+
+h2, h3 {
+    color: #e3f2fd;
+    border-left: 4px solid #ff9800;
+    padding-left: 15px;
+    margin-top: 25px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+table, th, td {
+    border: 2px solid #ffffff;
+}
+
+th {
+    background: rgba(255, 152, 0, 0.8);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+ul, ol {
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin: 8px 0;
+    color: #ffe0b2;
+    font-size: 16px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+td:hover {
+    background: rgba(255, 152, 0, 0.3);
+    transition: background 0.3s ease;
+}

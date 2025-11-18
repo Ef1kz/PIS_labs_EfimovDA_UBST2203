@@ -1,0 +1,72 @@
+<!-- Файл: articles/templates/archive.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Архив статей - Блог Ефимова Д.А. УБСТ2203</title>
+
+    <!-- Подключение CSS стилей -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+
+<!-- Указываем класс для страницы (для CSS) -->
+<body class="archive">
+
+<!-- БЛОК 1: HEADER ДЛЯ ЛОГОТИПА -->
+<div class="header">
+    <!-- Добавляем изображение логотипа -->
+    <img src="{% static 'img/logo.png' %}" alt="Логотип блога" class="logo">
+    <h1>Архив статей</h1>
+</div>
+
+<!-- БЛОК 2: ARCHIVE ДЛЯ СПИСКА СТАТЕЙ -->
+<div class="archive">
+
+    <!-- Используем шаблонный тег for для перебора статей -->
+    <!-- Цикл: для каждой статьи в списке posts -->
+    {% for post in posts %}
+
+    <!-- Контейнер для одной статьи с классом one-post -->
+    <div class="one-post">
+
+        <!-- Заголовок статьи -->
+        <!-- Обращаемся к полям модели через точечную нотацию: post.title -->
+        <h2 class="post-title">{{ post.title }}</h2>
+
+        <!-- Блок с информацией о статье -->
+        <div class="article-info">
+            <!-- Информация об авторе -->
+            <!-- post.author.username - имя пользователя-автора -->
+            <div class="article-author">Автор: {{ post.author.username }}</div>
+
+            <!-- Дата создания статьи -->
+            <!-- post.created_date - дата создания статьи -->
+            <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+
+        <!-- Отрывок текста статьи -->
+        <!-- post.get_excerpt - вызов нашего метода для краткого текста -->
+        <p class="article-text">{{ post.get_excerpt }}</p>
+
+    </div>  <!-- Закрываем one-post -->
+
+    {% endfor %}  <!-- Закрываем цикл for -->
+
+    <!-- Сообщение если статей нет -->
+    {% if not posts %}
+    <div class="one-post">
+        <p class="no-articles">Пока нет ни одной статьи.</p>
+    </div>
+    {% endif %}
+
+</div>  <!-- Закрываем archive -->
+
+<!-- Подвал сайта -->
+<div class="footer">
+    <p>Ефимов Дмитрий Алексеевич, группа УБСТ2203</p>
+    <p>Лабораторная работа №3 - Модели Django</p>
+</div>
+
+</body>
+</html>
